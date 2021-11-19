@@ -94,15 +94,15 @@ p {
 </head>
 <body id="body" class="light-mode">
     <section>  
-            <nav>
-              <div class="nav-container">
-                <ul class="tabs primary-nav"></ul>
-                {% for item in site.data.samplelist.docs %}
-                <li><a href="{{ item.url }}" class="tabs__link">{{ item.title }}</a></li>
-                {% endfor %}
-                </ul>
-              </div>
-            </nav>
+      <nav>
+        <div class="nav-container">
+          <ul>
+            {% for item in site.data.samplelist.docs %}
+            <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </nav>
              <br>
               
       <div class="container">
