@@ -94,7 +94,20 @@ p {
 </head>
 <body id="body" class="light-mode">
     <section>  
-      <nav>
+
+      <div class="uk-position-top">
+        <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+            <div class="uk-navbar-left">
+                <ul class="uk-navbar-nav">
+                  {% for item in site.data.menu.docs %}
+                  <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+                  {% endfor %}
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+      <!-- <nav>
         <div class="nav-container">
           <ul>
             {% for item in site.data.menu.docs %}
@@ -102,7 +115,7 @@ p {
             {% endfor %}
           </ul>
         </div>
-      </nav>
+      </nav> -->
              <br>
               
       <div class="container">
