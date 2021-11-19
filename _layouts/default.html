@@ -110,14 +110,7 @@ p {
   <div class="projects">
     <div class="content">
       <br>
-      <h1 class="item1" hidden>{{ site.title }}</h1>
-      <div class="image-window item2">
-        {% if site.avatar %}
-        <img src="{{site.avatar}}" alt="avatar" onContextMenu="return false" hidden/>
-        {% endif %}
-      </div>
-      <h3 class="item3 fw-light" hidden>{{ site.position }} </h3>
-      <h1 class="item1">{{ site.data.projects.docs_list_title: Projects}}</h1>
+      <h1 class="item1">{{ site.data.projects.docs_list_title }}</h1>
      
       <div class="uk-child-width-expand@s uk-text-center" uk-grid>
       {% for post in site.data.projects.docs %}
