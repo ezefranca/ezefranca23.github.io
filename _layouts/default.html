@@ -23,7 +23,6 @@
 
 </head>
 <body id="body" class="light-mode">
-    <section>  
       <nav>
         <div class="nav-container">
           <ul>
@@ -51,17 +50,13 @@
         </div>
     </div>
         {% endfor %}
+        {% for post in site.data.projects.docs %}
         <div class="uk-child-width-expand@s uk-text-center" uk-grid>
             <div>
-                <div class="uk-card uk-card-default uk-card-body">Item</div>
-            </div>
-            <div>
-                <div class="uk-card uk-card-default uk-card-body">Item</div>
-            </div>
-            <div>
-                <div class="uk-card uk-card-default uk-card-body">Item</div>
+                <div class="uk-card uk-card-default uk-card-body">{{ post.title }}</div>
             </div>
         </div>
+        {% endfor %}
         {{ content }}
     </div>
   </div>
@@ -79,7 +74,6 @@
                         </div>
                    </div>
             </div>
-          </section>
 
           <!-- <section>
             <div class="typewriter">
