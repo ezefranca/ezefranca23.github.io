@@ -19,7 +19,7 @@ docs:
   opensource: true
   uid: avatar.png
 
-  - title: projects
+- title: projects
   url: projects
   worktype: projects
   opensource: true
@@ -37,7 +37,7 @@ docs:
   opensource: true
   uid: avatar.png
 
-  - title: projects
+- title: projects
   url: projects
   worktype: projects
   opensource: true
@@ -55,7 +55,7 @@ docs:
   opensource: true
   uid: avatar.png
 
-  - title: projects
+- title: projects
   url: projects
   worktype: projects
   opensource: true
@@ -73,7 +73,7 @@ docs:
   opensource: true
   uid: avatar.png
 
-  - title: projects
+- title: projects
   url: projects
   worktype: projects
   opensource: true
@@ -91,7 +91,7 @@ docs:
   opensource: true
   uid: avatar.png
 
-  - title: projects
+- title: projects
   url: projects
   worktype: projects
   opensource: true
@@ -109,7 +109,7 @@ docs:
   opensource: true
   uid: avatar.png
 
-  - title: projects
+- title: projects
   url: projects
   worktype: projects
   opensource: true
