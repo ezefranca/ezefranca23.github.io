@@ -11,13 +11,15 @@
     {% if site.canonical %}
     <link rel="canonical" href="{{ site.canonical }}"/>
     {% endif %}
-    <link rel=stylesheet href="./assets/css/eze.css">
+    <link rel=stylesheet href="/assets/css/eze.css">
     <link rel=stylesheet href=https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css >
     <script src=https://kit.fontawesome.com/ac18aec964.js crossorigin=anonymous></script>
     <script src=https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js></script>
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link rel=stylesheet href="./assets/css/projects.css">
+    <link rel="stylesheet" href="/assets/css/uikit.min.css" />
+        <script src="/assets/js/uikit.min.js"></script>
+        <script src="/assets/js/uikit-icons.min.js"></script>
 
 </head>
 <body id="body" class="light-mode">
@@ -39,36 +41,15 @@
     <div class="content">
       <br>
       <h1 class="item1">{{ site.data.projects.docs_list_title: Projects}}</h1>
-      <ul class="projects clearfix">
-        {% for post in site.data.projects.docs %}
-          <li>
-            <div class="project">
-              <a class="cover" href="{{ post.url }}">
-                <div class="project-details">
-                  <span>
-                    {{ post.title }}
-                  </span>
-                  <span>
-                    {{ post.worktype }}
-                  </span>
-                  <span>
-                    View project
-                  </span>
-                </div>
-              </a>
-              {% if post.opensource %}
-                {% if post.blackbg %}
-                  <span class="github-icon light"></span>
-                {% else %}
-                  <span class="github-icon"></span>
-                {% endif %}
-              {% endif %}
-              <img class="thumb" src="/assets/img/{{post.uid}}" />
-              <div class="aspect-two-one"></div>
-            </div>
-          </li>
+      
+      {% for post in site.data.projects.docs %}
+      <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body"> {{ post.title }}</div>
+            <img class="thumb" src="/assets/img/{{post.uid}}" />
+        </div>
+        </div>
         {% endfor %}
-        </ul>
         {{ content }}
     </div>
   </div>
