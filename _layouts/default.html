@@ -1108,15 +1108,7 @@ td {
   <div class="projects">
     <div class="content">
       <br>
-      <h1 class="item1">{{ site.title }}</h1>
-      <div class="image-window item2">
-        {% if site.avatar %}
-        <img src="{{site.avatar}}" alt="avatar" onContextMenu="return false" />
-        {% endif %}
-      </div>
-      <h3 class="item3 fw-light">{{ site.position }} </h3>
-      {{ content }}
-
+      <h1 class="item1">{{ site.data.projects.docs_list_title: Projects}}</h1>
       <ul class="projects clearfix">
         {% for post in site.data.projects.docs %}
           <li>
@@ -1147,7 +1139,7 @@ td {
           </li>
         {% endfor %}
         </ul>
-
+        {{ content }}
     </div>
   </div>
 </div>
