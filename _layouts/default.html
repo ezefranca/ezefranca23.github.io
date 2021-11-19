@@ -103,7 +103,7 @@ p {
             <div class="uk-navbar-center">
                 <ul class="uk-navbar-nav">
                   {% for item in site.data.menu.docs %}
-                  <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+                  <div class="uk-navbar-item"><li><a href="{{ item.url }}">{{ item.title }}</a></li></div>
                   {% endfor %}
                 </ul>
             </div>
