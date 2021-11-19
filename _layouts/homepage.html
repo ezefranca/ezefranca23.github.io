@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <title>{{ site.title }} | {{site.affiliation}}</title>
-
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ site.description }}">
     {% if site.keywords %}
@@ -13,21 +11,14 @@
     {% if site.canonical %}
     <link rel="canonical" href="{{ site.canonical }}"/>
     {% endif %}
-
-    <link rel="icon" media="(prefers-color-scheme:dark)" href="{{ site.favicon_dark }}" type="image/png" />
-    <link rel="icon" media="(prefers-color-scheme:light)" href="{{ site.favicon }}" type="image/png" />
-    <script src="./assets/js/favicon-switcher.js" type="application/javascript"></script>
-
-    <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin=anonymous>
-    <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin=anonymous>
-    <link rel="stylesheet" href="./assets/css/nav.css">
-    <link rel="stylesheet" href="./assets/css/eze.css">
-    <link rel=stylesheet href=https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css>
-<script src=https://kit.fontawesome.com/ac18aec964.js crossorigin=anonymous type="28437aae8239039184223e05-text/javascript"></script>
-<script src=https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js type="28437aae8239039184223e05-text/javascript"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous" type="28437aae8239039184223e05-text/javascript"></script>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-<style>
+    <link rel=stylesheet href="./assets/css/eze.css">
+    <link rel=stylesheet href=https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css >
+    <script src=https://kit.fontawesome.com/ac18aec964.js crossorigin=anonymous></script>
+    <script src=https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  
+  <style>
   .container {
   display: grid;
   grid-template-columns: 1fr;
@@ -100,67 +91,56 @@ p {
   max-width: 600px;
 }
   </style>
-  </head>
-  <body>
-    <nav class="nav-collapse" role="navigation">
-      <ul class="tabs primary-nav"></ul>
-        {% for item in site.data.samplelist.docs %}
-           <a href="{{ item.url }}" class="tabs__link">{{ item.title }}</a>
-        {% endfor %}
-     </ul>
-    </nav>
-      <section>
-
-     
-
-      <br>
-
-     
-      </section>
-
-
-
-     
-    
-      <section>
-
-      <br>
+</head>
+<body id="body" class="light-mode">
+    <section>  
+            <nav>
+              <div class="nav-container">
+                <ul class="tabs primary-nav"></ul>
+                {% for item in site.data.samplelist.docs %}
+                <li><a href="{{ item.url }}" class="tabs__link">{{ item.title }}</a></li>
+                {% endfor %}
+                </ul>
+              </div>
+            </nav>
+             <br>
+              
       <div class="container">
-      <div class="header"></div>
-      <div class="projects">
-      <div class="content">
+  <div class="header"></div>
+  <div class="projects">
+    <div class="content">
       <br>
-      <h1 class="item1">Ezequiel França dos Santos</h1>
+      <h1 class="item1">{{ site.title }}</h1>
       <div class="image-window item2">
         {% if site.avatar %}
         <img src="{{site.avatar}}" alt="avatar" onContextMenu="return false" />
         {% endif %}
       </div>
-      <h3 class="item3 fw-light"> {{ content }}</h3>
-      </div>
-      </div>
-      </div>
+      <h3 class="item3 fw-light">{{ site.position }} </h3>
+      {{ content }}
+    </div>
+  </div>
+</div>
 
-      </section>
-      
+              
+          <div class=container>
+                     
+                      <div class="social">
+                         <div class=social-links>
+                          <a class=social-icon href="{{ site.linkedin }}" aria-label="Perfil de Ezequiel no LinkedIn"><i class="fab fa-linkedin-in" aria-hidden=true aria-label="Perfil de Ezequiel no LinkedIn"></i></a>
+                          <a class=social-icon href="{{ site.github }}" aria-label="Perfil de ezequiel no Github"><i class="fab fa-github" aria-hidden=true aria-label="Perfil de ezequiel no Github"></i></a>
+                          <a class=social-icon href="{{ site.twitter }}" aria-label="Perfil de Ezequiel no Twitter"><i class="fab fa-twitter" aria-hidden=true aria-label="Perfil de Ezequiel no Twitter"></i></a>
+                          <a class=social-icon href="{{ site.lattes }}" aria-label="Link para Currículo Lattes de Ezequiel"><i class="ai ai-lattes-square ai-1x" aria-label="Link para Currículo Lattes de Ezequiel no Twitter"></i></a>
+                        </div>
+                   </div>
+            </div>
+          </section>
 
-
-      <footer>
-        <div class=container>
-          <div class="social">
-          <div class=social-links>
-          <a class=social-icon href="{{ site.linkedin }}" aria-label="Perfil de Ezequiel no LinkedIn"><i class="fab fa-linkedin-in" aria-hidden=true aria-label="Perfil de Ezequiel no LinkedIn"></i></a>
-          <a class=social-icon href="{{ site.github }}" aria-label="Perfil de ezequiel no Github"><i class="fab fa-github" aria-hidden=true aria-label="Perfil de ezequiel no Github"></i></a>
-          <a class=social-icon href="{{ site.twitter }}" aria-label="Perfil de Ezequiel no Twitter"><i class="fab fa-twitter" aria-hidden=true aria-label="Perfil de Ezequiel no Twitter"></i></a>
-          <a class=social-icon href="{{ site.lattes }}" aria-label="Link para Currículo Lattes de Ezequiel"><i class="ai ai-lattes-square ai-1x" aria-label="Link para Currículo Lattes de Ezequiel no Twitter"></i></a>
-          </div>
-          </div>
-          </div>
-        <br>
-        <br>
-        <br>
-      </footer>
-    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
-    <script src=assets/js/email.js type="28437aae8239039184223e05-text/javascript"></script>
-  </body>
+          <!-- <section>
+            <div class="typewriter">
+              <h2>#import Arduino, Python, Swift, C#, Unity</h2>
+            </div>
+          </section> -->
+          <script src=assets/js/email.js></script>
+</body>
 </html>
