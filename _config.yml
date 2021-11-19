@@ -1,8 +1,8 @@
-title: Your Name
-position: Ph.D. Student
+title: Ezequiel Santos
+position: Software Developer and Creative Technologist
 affiliation: Your Affiliation
-email: yourname (at) example.edu
-keywords: minimal academic
+email: ezefranca (at) 
+keywords: ezefranca iOS Developer Game Developer
 google_scholar: https://scholar.google.com/
 github_link: https://github.com/yaoyao-liu/minimal-light
 linkedin: https://www.linkedin.com/
@@ -10,6 +10,6 @@ avatar: ./assets/img/avatar.png
 google_analytics: UA-111540567-4
 favicon: ./assets/img/favicon.png
 favicon_dark: ./assets/img/favicon-dark.png
-description: The Minimal Light is a simple and elegant jekyll theme for academic personal homepage.
-canonical: https://minimal-light.yyliu.net/
+description: Ezequiel Santos personal homepage.
+canonical: https://ezequiel.app/
 remote_theme: yaoyao-liu/minimal-light
