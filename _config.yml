@@ -1,15 +1,29 @@
 title: Ezequiel Santos
-position: Software Developer and Creative Technologist
+position: 👨🏻‍💻 Software Developer and Creative Technologist
 affiliation: Your Affiliation
 email: ezefranca (at) 
 keywords: ezefranca iOS Developer Game Developer
 google_scholar: https://scholar.google.com/
 github_link: https://github.com/yaoyao-liu/minimal-light
 linkedin: https://www.linkedin.com/
-avatar: ./assets/img/avatar.png
-google_analytics: UA-111540567-4
-favicon: ./assets/img/favicon.png
-favicon_dark: ./assets/img/favicon-dark.png
+github: github
+lattes: lattes
+twitter: twitter
+avatar: ./assets/img/profile-img.webp
+favicon: ./assets/img/favicon.webp
+favicon_dark: ./assets/img/favicon.webp
 description: Ezequiel Santos personal homepage.
 canonical: https://ezequiel.app/
 remote_theme: yaoyao-liu/minimal-light
+
+docs_list_title: ACME Documentation
+docs:
+
+- title: Introduction
+  url: introduction.html
+
+- title: Configuration
+  url: configuration.html
+
+- title: Deployment
+  url: deployment.html
