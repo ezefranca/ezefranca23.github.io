@@ -17,9 +17,7 @@
     <script src=https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js></script>
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/css/uikit.min.css" />
-    <script src="/assets/js/uikit.min.js"></script>
-    <script src="/assets/js/uikit-icons.min.js"></script>
+  
   <style>
   .container {
   display: grid;
@@ -97,17 +95,27 @@ p {
 <body id="body" class="light-mode">
     <section>  
 
-        <div class="uk-position-top">
-            <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
-                <div class="uk-navbar-left">
-                    <ul class="uk-navbar-nav">
-                      {% for item in site.data.menu.docs %}
-                      <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-                      {% endfor %}
-                    </ul>
-                </div>
-            </nav>
+      <div class="uk-position-top">
+        <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+            <div class="uk-navbar-left">
+                <ul class="uk-navbar-nav">
+                  {% for item in site.data.menu.docs %}
+                  <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+                  {% endfor %}
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+      <!-- <nav>
+        <div class="nav-container">
+          <ul>
+            {% for item in site.data.menu.docs %}
+            <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+            {% endfor %}
+          </ul>
         </div>
+      </nav> -->
              <br>
               
       <div class="container">
