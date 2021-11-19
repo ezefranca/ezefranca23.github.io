@@ -18,3 +18,111 @@ docs:
   worktype: talks
   opensource: true
   uid: avatar.png
+
+  - title: projects
+  url: projects
+  worktype: projects
+  opensource: true
+  uid: avatar.png
+
+- title: talks
+  url: talks
+  worktype: talks
+  opensource: true
+  uid: avatar.png
+
+- title: contact
+  url: contact
+  worktype: talks
+  opensource: true
+  uid: avatar.png
+
+  - title: projects
+  url: projects
+  worktype: projects
+  opensource: true
+  uid: avatar.png
+
+- title: talks
+  url: talks
+  worktype: talks
+  opensource: true
+  uid: avatar.png
+
+- title: contact
+  url: contact
+  worktype: talks
+  opensource: true
+  uid: avatar.png
+
+  - title: projects
+  url: projects
+  worktype: projects
+  opensource: true
+  uid: avatar.png
+
+- title: talks
+  url: talks
+  worktype: talks
+  opensource: true
+  uid: avatar.png
+
+- title: contact
+  url: contact
+  worktype: talks
+  opensource: true
+  uid: avatar.png
+
+  - title: projects
+  url: projects
+  worktype: projects
+  opensource: true
+  uid: avatar.png
+
+- title: talks
+  url: talks
+  worktype: talks
+  opensource: true
+  uid: avatar.png
+
+- title: contact
+  url: contact
+  worktype: talks
+  opensource: true
+  uid: avatar.png
+
+  - title: projects
+  url: projects
+  worktype: projects
+  opensource: true
+  uid: avatar.png
+
+- title: talks
+  url: talks
+  worktype: talks
+  opensource: true
+  uid: avatar.png
+
+- title: contact
+  url: contact
+  worktype: talks
+  opensource: true
+  uid: avatar.png
+
+  - title: projects
+  url: projects
+  worktype: projects
+  opensource: true
+  uid: avatar.png
+
+- title: talks
+  url: talks
+  worktype: talks
+  opensource: true
+  uid: avatar.png
+
+- title: contact
+  url: contact
+  worktype: talks
+  opensource: true
+  uid: avatar.png
