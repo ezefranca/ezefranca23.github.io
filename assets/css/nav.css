@@ -9,9 +9,9 @@
 }
 
 html {
-    font: 0.75em/1.5 sans-serif;
-   
-    margin-top: 50px;
+    font-family: avenir,helvetica neue,Helvetica,Arial,sans-serif;
+    margin-top: 0px;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /**

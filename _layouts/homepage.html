@@ -23,92 +23,143 @@
 
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/nav.css">
+    <link rel=stylesheet href=https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css>
+<script src=https://kit.fontawesome.com/ac18aec964.js crossorigin=anonymous type="28437aae8239039184223e05-text/javascript"></script>
+<script src=https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js type="28437aae8239039184223e05-text/javascript"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous" type="28437aae8239039184223e05-text/javascript"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   </head>
   <body>
     <nav class="nav-collapse" role="navigation">
-      <ul class="tabs primary-nav">
-          <li class="tabs__item">
-              <a href="#" class="tabs__link">Home</a>
-          </li>
-          <li class="tabs__item">
-              <a href="#" class="tabs__link">Talks</a>
-          </li>
-          <li class="tabs__item">
-              <a href="#" class="tabs__link">Schedule</a>
-          </li>
-          <li class="tabs__item">
-              <a href="#" class="tabs__link">Location</a>
-          </li>
-          <li class="tabs__item">
-              <a href="#" class="tabs__link">Contactd</a>
-          </li>
-      </ul>
-  </nav>
-    <div class="wrapper">
-      <header>
-        
-        {% if site.avatar %}
-        <a class="image avatar"><img src="{{site.avatar}}" alt="avatar" onContextMenu="return false" /></a>
-        {% endif %}
-
-        <h1>{{ site.title }}</h1> 
-        
-        {% if site.position %}
-        {{ site.position }}
-        <br>
-        {% endif %}
-        {{ site.affiliation }}
-        {% if site.email %}
-        <br>
-        {{ site.email }}
-        <br>
-        <br>
-        {% endif %}
-
-      </header>
+      <ul class="tabs primary-nav"></ul>
+        {% for item in site.data.samplelist.docs %}
+           <a href="{{ item.url }}" class="tabs__link">{{ item.title }}</a>
+        {% endfor %}
+     </ul>
       <section>
 
-      {{ content }}
+     
 
       <br>
 
-      <p><small>Powered by Jekyll and <a href="https://github.com/yaoyao-liu/minimal-light" target="_blank" rel="noopener">Minimal Light</a> theme.</small></p>
+     
+      </section>
+
+
+
+      <style>
+        .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 30px 1fr 30px;
+      }
+      
+      .header {
+        border-bottom: 1px solid lightgrey;
+      }
+      
+      .sidebar {
+        border-right: 1px solid lightgrey;
+      }
+      
+      .footer {
+          border-top: 1px solid lightgrey;
+      }
+      
+      .projects {
+        display: grid;
+        grid-template-columns: 1fr;
+        overflow: hidden;
+      }
+      
+      .content {
+        display: grid;
+        grid-template-rows: 0.25fr 0.25fr 0.25fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 10px;
+       grid-template-areas: ". item1 item1 ."
+                            "item2 item2 item2 item2"
+                             "item3 item3 item3 item3";
+        overflow-y: scroll;
+        padding: 20px;
+      }
+      
+      .item > iframe {
+          object-fit:scale-down;
+          width: 100%;
+        height: 300px;
+      }
+      
+      
+      .item > img {
+          object-fit:scale-down;
+          width: 100%;
+        height: 300px;
+      }
+      
+      .item {
+          background-color: clear;
+          justify-self: stretch;
+      }
+      
+      
+      
+      .item1 {
+          grid-area: item1;
+      }
+      
+      .item2 {
+          grid-area: item2;
+      }
+      
+      .item3 {
+          grid-area: item3;
+      }
+      
+      p {
+        max-width: 600px;
+      }
+        </style>
+    
+      <section>
+
+      <br>
+      <div class="container">
+      <div class="header"></div>
+      <div class="projects">
+      <div class="content">
+      <br>
+      <h1 class="item1">Ezequiel França dos Santos</h1>
+      <div class="image-window item2">
+        {% if site.avatar %}
+        <img src="{{site.avatar}}" alt="avatar" onContextMenu="return false" />
+        {% endif %}
+      </div>
+      <h3 class="item3 fw-light"> {{ content }}</h3>
+      </div>
+      </div>
+      </div>
 
       </section>
-      <footer>
-        <div class="social-icons">
+      
 
-          {% if site.linkedin %}
-          <a href="{{ site.linkedin }}" target="_blank">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          {% endif %}
-          {% if site.google_scholar %}
-          <a href="{{ site.google_scholar}}" target="_blank">
-            <i class="ai ai-google-scholar" style="font-size:1.6rem"></i>
-          </a>
-          {% endif %}
-          {% if site.github_link %}            
-          <a href="{{ site.github_link }}" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
-          {% endif %}
-        </div>
+
+      <footer>
+        <div class=container>
+          <div class="social">
+          <div class=social-links>
+          <a class=social-icon href="{{ site.linkedin }}" aria-label="Perfil de Ezequiel no LinkedIn"><i class="fab fa-linkedin-in" aria-hidden=true aria-label="Perfil de Ezequiel no LinkedIn"></i></a>
+          <a class=social-icon href="{{ site.github }}" aria-label="Perfil de ezequiel no Github"><i class="fab fa-github" aria-hidden=true aria-label="Perfil de ezequiel no Github"></i></a>
+          <a class=social-icon href="{{ site.twitter }}" aria-label="Perfil de Ezequiel no Twitter"><i class="fab fa-twitter" aria-hidden=true aria-label="Perfil de Ezequiel no Twitter"></i></a>
+          <a class=social-icon href="{{ site.lattes }}" aria-label="Link para Currículo Lattes de Ezequiel"><i class="ai ai-lattes-square ai-1x" aria-label="Link para Currículo Lattes de Ezequiel no Twitter"></i></a>
+          </div>
+          </div>
+          </div>
         <br>
         <br>
         <br>
       </footer>
-    </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
-    {% if site.google_analytics %}
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      ga('create', '{{ site.google_analytics }}', 'auto');
-      ga('send', 'pageview');
-    </script>
-    {% endif %}
+    <script src=assets/js/email.js type="28437aae8239039184223e05-text/javascript"></script>
   </body>
 </html>
