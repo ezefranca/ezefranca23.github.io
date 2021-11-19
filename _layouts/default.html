@@ -11,18 +11,89 @@
     {% if site.canonical %}
     <link rel="canonical" href="{{ site.canonical }}"/>
     {% endif %}
-    <link rel=stylesheet href="/assets/css/eze.css">
+    <link rel=stylesheet href="./assets/css/eze.css">
     <link rel=stylesheet href=https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css >
     <script src=https://kit.fontawesome.com/ac18aec964.js crossorigin=anonymous></script>
     <script src=https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js></script>
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/css/uikit.min.css" />
-        <script src="/assets/js/uikit.min.js"></script>
-        <script src="/assets/js/uikit-icons.min.js"></script>
+  
+  <style>
+  .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 30px 1fr 30px;
+}
 
+.header {
+  border-bottom: 1px solid lightgrey;
+}
+
+.sidebar {
+  border-right: 1px solid lightgrey;
+}
+
+.footer {
+    border-top: 1px solid lightgrey;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  overflow: hidden;
+}
+
+.content {
+  display: grid;
+  grid-template-rows: 0.25fr 0.25fr 0.25fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+ grid-template-areas: ". item1 item1 ."
+                      "item2 item2 item2 item2"
+                       "item3 item3 item3 item3";
+  overflow-y: scroll;
+  padding: 20px;
+}
+
+.item > iframe {
+    object-fit:scale-down;
+    width: 100%;
+  height: 300px;
+}
+
+
+.item > img {
+    object-fit:scale-down;
+    width: 100%;
+  height: 300px;
+}
+
+.item {
+    background-color: clear;
+    justify-self: stretch;
+}
+
+
+
+.item1 {
+    grid-area: item1;
+}
+
+.item2 {
+    grid-area: item2;
+}
+
+.item3 {
+    grid-area: item3;
+}
+
+p {
+  max-width: 600px;
+}
+  </style>
 </head>
 <body id="body" class="light-mode">
+    <section>  
       <nav>
         <div class="nav-container">
           <ul>
@@ -37,7 +108,15 @@
       <div class="container">
   <div class="header"></div>
   <div class="projects">
+    <div class="content">
       <br>
+      <h1 class="item1" hidden>{{ site.title }}</h1>
+      <div class="image-window item2">
+        {% if site.avatar %}
+        <img src="{{site.avatar}}" alt="avatar" onContextMenu="return false" hidden/>
+        {% endif %}
+      </div>
+      <h3 class="item3 fw-light" hidden>{{ site.position }} </h3>
       <h1 class="item1">{{ site.data.projects.docs_list_title: Projects}}</h1>
      
       <div class="uk-child-width-expand@s uk-text-center" uk-grid>
@@ -48,16 +127,9 @@
                 <p><img class="thumb" src="/assets/img/{{post.uid}}" uk-img></p>
             </div>
         </div>
+        {% endfor %}
     </div>
-        {% endfor %}
-        {% for post in site.data.projects.docs %}
-        <div class="uk-child-width-expand@s uk-text-center" uk-grid>
-            <div>
-                <div class="uk-card uk-card-default uk-card-body">{{ post.title }}</div>
-            </div>
-        </div>
-        {% endfor %}
-        {{ content }}
+      {{ content }}
     </div>
   </div>
 </div>
@@ -74,6 +146,7 @@
                         </div>
                    </div>
             </div>
+          </section>
 
           <!-- <section>
             <div class="typewriter">
