@@ -15,15 +15,3 @@ favicon_dark: ./assets/img/favicon.webp
 description: Ezequiel Santos personal homepage.
 canonical: https://ezequiel.app/
 remote_theme: yaoyao-liu/minimal-light
-
-docs_list_title: ACME Documentation
-docs:
-
-- title: Introduction
-  url: introduction.html
-
-- title: Configuration
-  url: configuration.html
-
-- title: Deployment
-  url: deployment.html
