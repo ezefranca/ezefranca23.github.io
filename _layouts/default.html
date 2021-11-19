@@ -41,15 +41,16 @@
     <div class="content">
       <br>
       <h1 class="item1">{{ site.data.projects.docs_list_title: Projects}}</h1>
-      
-      {% for post in site.data.projects.docs %}
+     
       <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+      {% for post in site.data.projects.docs %}
         <div>
-            <div class="uk-card uk-card-default uk-card-body"> {{ post.title }}</div>
+            <div class="uk-card uk-card-default uk-card-body"> {{ post.title }}
             <img class="thumb" src="/assets/img/{{post.uid}}" />
         </div>
-        </div>
+    </div>
         {% endfor %}
+    </div>
         {{ content }}
     </div>
   </div>
