@@ -28,6 +28,79 @@
 <script src=https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js type="28437aae8239039184223e05-text/javascript"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous" type="28437aae8239039184223e05-text/javascript"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<style>
+  .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 30px 1fr 30px;
+}
+
+.header {
+  border-bottom: 1px solid lightgrey;
+}
+
+.sidebar {
+  border-right: 1px solid lightgrey;
+}
+
+.footer {
+    border-top: 1px solid lightgrey;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  overflow: hidden;
+}
+
+.content {
+  display: grid;
+  grid-template-rows: 0.25fr 0.25fr 0.25fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+ grid-template-areas: ". item1 item1 ."
+                      "item2 item2 item2 item2"
+                       "item3 item3 item3 item3";
+  overflow-y: scroll;
+  padding: 20px;
+}
+
+.item > iframe {
+    object-fit:scale-down;
+    width: 100%;
+  height: 300px;
+}
+
+
+.item > img {
+    object-fit:scale-down;
+    width: 100%;
+  height: 300px;
+}
+
+.item {
+    background-color: clear;
+    justify-self: stretch;
+}
+
+
+
+.item1 {
+    grid-area: item1;
+}
+
+.item2 {
+    grid-area: item2;
+}
+
+.item3 {
+    grid-area: item3;
+}
+
+p {
+  max-width: 600px;
+}
+  </style>
   </head>
   <body>
     <nav class="nav-collapse" role="navigation">
@@ -36,6 +109,7 @@
            <a href="{{ item.url }}" class="tabs__link">{{ item.title }}</a>
         {% endfor %}
      </ul>
+    </nav>
       <section>
 
      
@@ -47,79 +121,7 @@
 
 
 
-      <style>
-        .container {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 30px 1fr 30px;
-      }
-      
-      .header {
-        border-bottom: 1px solid lightgrey;
-      }
-      
-      .sidebar {
-        border-right: 1px solid lightgrey;
-      }
-      
-      .footer {
-          border-top: 1px solid lightgrey;
-      }
-      
-      .projects {
-        display: grid;
-        grid-template-columns: 1fr;
-        overflow: hidden;
-      }
-      
-      .content {
-        display: grid;
-        grid-template-rows: 0.25fr 0.25fr 0.25fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 10px;
-       grid-template-areas: ". item1 item1 ."
-                            "item2 item2 item2 item2"
-                             "item3 item3 item3 item3";
-        overflow-y: scroll;
-        padding: 20px;
-      }
-      
-      .item > iframe {
-          object-fit:scale-down;
-          width: 100%;
-        height: 300px;
-      }
-      
-      
-      .item > img {
-          object-fit:scale-down;
-          width: 100%;
-        height: 300px;
-      }
-      
-      .item {
-          background-color: clear;
-          justify-self: stretch;
-      }
-      
-      
-      
-      .item1 {
-          grid-area: item1;
-      }
-      
-      .item2 {
-          grid-area: item2;
-      }
-      
-      .item3 {
-          grid-area: item3;
-      }
-      
-      p {
-        max-width: 600px;
-      }
-        </style>
+     
     
       <section>
 
