@@ -134,6 +134,8 @@ p {
                   <div class="uk-card uk-card-default uk-card-body">
                       <h3 class="uk-card-title">{{ post.title }}</h3>
                       <p><img class="thumb" src="/assets/img/{{post.uid}}" uk-img></p>
+                      <p>{{ post.description }}</p>
+                      <p><a href="{{post.url}}">Access</a></p>
                   </div>
               </div>
               {% endfor %}
