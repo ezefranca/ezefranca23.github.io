@@ -132,10 +132,16 @@ p {
             {% for post in site.data.projects.docs %}
               <div>
                   <div class="uk-card uk-card-default uk-card-body">
+                    <div class="uk-card-header">
                       <h3 class="uk-card-title">{{ post.title }}</h3>
+                      </div>
                       <p><img class="thumb" src="/assets/img/{{post.uid}}" uk-img></p>
+                      <div class="uk-card-body">
                       <p>{{ post.description }}</p>
+                    </div>
+                    <div class="uk-card-footer">
                       <p><a href="{{post.url}}">Access</a></p>
+                    </div>
                   </div>
               </div>
               {% endfor %}
