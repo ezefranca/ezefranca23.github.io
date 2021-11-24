@@ -20,7 +20,7 @@ docs:
   uid: damas.png
 
 - title: NFCPlay
-  description: Created during the Programming LAB II during my masters, this work aims to present the use of an NFC tag (Near Field Communication) as an input mechanism for the player to overcome the lack of input on VR Headsets. <br> <br> <br>
+  description: Created during the Programming LAB II during my masters, this work aims to present the use of an NFC tag (Near Field Communication) as an input mechanism for the player to overcome the lack of input on VR Headsets. <br> <br>
   url: null
   worktype: sdk
   github: https://github.com/ezefranca/NFCPlay
