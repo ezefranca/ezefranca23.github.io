@@ -30,7 +30,12 @@ layout: default
                       {% if post.url != null %}
                       <a class=social-icon href="{{ post.url }}" aria-label="{{post.title}}"><i class="fab fa-link" aria-hidden=true aria-label="{{post.title}}"></i></a>
                       {% endif %}
+
+                      {% if post.paper != null %}
+                      <a class=social-icon href="{{ post.paper }}" aria-label="{{post.title}}"><i class="fab fa-user-graduate" aria-hidden=true aria-label="{{post.title}}"></i></a>
+                      {% endif %}
                     </div>
+
                   </div>
               </div>
               {% endfor %}
