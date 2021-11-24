@@ -15,12 +15,13 @@ docs:
   opensource: true
   uid: ciap2.png
 
-- title: CIAP2
-  description: The CIAP 2 application is intended for Brazilian Primary Care teams, doctors, psychologists, nurses, social workers, among others, aiming to facilitate the search for procedures and codes related to symptoms, complaints and procedures in primary health care.
-  url: https://ciap2.app
+- title: Damas
+  description: Checkers game made in Unity3D with machine player inteligence build without any AI algorithm
+  url: 
+  github: https://github.com/ezefranca/Damas
   worktype: app
   opensource: true
-  uid: ciap2.png
+  uid: damas.png
 
 - title: CIAP2
   description: The CIAP 2 application is intended for Brazilian Primary Care teams, doctors, psychologists, nurses, social workers, among others, aiming to facilitate the search for procedures and codes related to symptoms, complaints and procedures in primary health care.
