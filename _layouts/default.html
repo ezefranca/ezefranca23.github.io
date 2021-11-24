@@ -150,12 +150,18 @@
                     <div class="uk-card-header">
                       <h3 class="uk-card-title">{{ post.title }}</h3>
                       </div>
-                      <p><img class="thumb" width="180px" height="180px" src="/assets/img/{{post.uid}}" uk-img></p>
+                      <p><img class="thumb" height="180px" src="/assets/img/{{post.uid}}" uk-img></p>
                       <div class="uk-card-body uk-text-justify">
                       <p>{{ post.description }}</p>
                     </div>
                     <div class="uk-card-footer">
-                      <p><a href="{{post.url}}">Access</a></p>
+                      {% if post.github != "" %}
+                      <a class=social-icon href="{{ post.github }}" aria-label="{{post.title}}"><i class="fab fa-github" aria-hidden=true aria-label="{{post.title}}"></i></a>
+                      {% endif %}
+                      
+                      {% if post.github != "" %}
+                      <a class=social-icon href="{{ post.url }}" aria-label="{{post.title}}"><i class="fab fa-link" aria-hidden=true aria-label="{{post.title}}"></i></a>
+                      {% endif 
                     </div>
                   </div>
               </div>
