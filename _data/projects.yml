@@ -1,23 +1,6 @@
 docs_list_title: Projects
 docs:
 
-- title: CIAP2
-  description: The CIAP 2 app is intended for Brazilian Primary Care teams, doctors, psychologists, nurses, social workers, among others, aiming to facilitate the search for procedures and codes related to symptoms, complaints and procedures in primary health care.
-  url: https://ciap2.app
-  worktype: app
-  opensource: true
-  github: null
-  appstore: https://itunes.apple.com/app/apple-store/id1450836069?pt=95625862&ct=site&mt=8
-  googleplay: https://play.google.com/store/apps/details?id=com.ciap2&hl=pt_BR
-  uid: ciap2.png
-
-- title: Damas
-  description: Checkers game made in Unity3D with machine player inteligence build without any AI algorithm <br> <br> <br> <br> <br>
-  url: null
-  github: https://github.com/ezefranca/Damas
-  worktype: app
-  opensource: true
-  uid: damas.png
 
 - title: NFCPlay
   description: Created during the Programming LAB II during my masters, this work aims to present the use of an NFC tag (Near Field Communication) as an input mechanism for the player to overcome the lack of input on VR Headsets. <br> <br>
@@ -27,6 +10,25 @@ docs:
   paper: https://sol.sbc.org.br/index.php/svr_estendido/article/view/12964
   opensource: true
   uid: nfcplay.webp
+
+- title: Damas
+  description: Checkers game made in Unity3D with machine player inteligence build without any AI algorithm <br> <br> <br> <br> <br>
+  url: null
+  github: https://github.com/ezefranca/Damas
+  worktype: app
+  opensource: true
+  uid: damas.png
+
+- title: CIAP2
+  description: The CIAP 2 app is intended for Brazilian Primary Care teams, doctors, psychologists, nurses, social workers, among others, aiming to facilitate the search for procedures and codes related to symptoms, complaints and procedures in primary health care.
+  url: https://ciap2.app
+  worktype: app
+  opensource: true
+  github: null
+  appstore: https://itunes.apple.com/app/apple-store/id1450836069?pt=95625862&ct=site&mt=8
+  googleplay: https://play.google.com/store/apps/details?id=com.ciap2&hl=pt_BR
+  uid: ciap2.png
+  paper: https://www.even3.com.br/anais/cbtms9/144910-desenvolvimento-de-um-aplicativo-para-consulta-ao-sistema-de-classificacao-internacional-de-atencao-primaria---se/
 
 - title: Simple inclined plane simulation
   description: Developed as homework during my specialization in Computing Education at USP. <br> <br> <br> <br> <br>
