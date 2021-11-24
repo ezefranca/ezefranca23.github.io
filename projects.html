@@ -1,0 +1,39 @@
+---
+layout: default
+---
+<div class="container">
+  <div class="header"></div>
+  <div class="projects">
+    <div class="content">
+      <br>
+    
+      <h1 class="item1">{{ site.data.projects.title }}</h1>
+      <div class="item2">
+        <div class="uk-child-width-1-3@m uk-text-center" uk-grid uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 50; repeat: true">
+            {% for post in site.data.projects.docs %}
+              <div>
+                  <div class="uk-card uk-card-default uk-card-body">
+                    <div class="uk-card-header">
+                      <h3 class="uk-card-title">{{ post.title }}</h3>
+                      </div>
+                      <p><img class="thumb" height="180px" width="100%" src="/assets/img/{{post.uid}}" uk-img></p>
+                      <div class="uk-card-body uk-text-justify">
+                      <p>{{ post.description }}</p>
+                    </div>
+                    <div class="uk-card-footer">
+                      {% if post.github != null %}
+                      <a class=social-icon href="{{ post.github }}" aria-label="{{post.title}}"><i class="fab fa-github" aria-hidden=true aria-label="{{post.title}}"></i></a>
+                      {% endif %}
+                      
+                      {% if post.url != null %}
+                      <a class=social-icon href="{{ post.url }}" aria-label="{{post.title}}"><i class="fab fa-link" aria-hidden=true aria-label="{{post.title}}"></i></a>
+                      {% endif %}
+                    </div>
+                  </div>
+              </div>
+              {% endfor %}
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
