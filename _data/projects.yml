@@ -28,12 +28,12 @@ docs:
   opensource: true
   uid: nfcplay.webp
 
-- title: CIAP2
-  description: The CIAP 2 application is intended for Brazilian Primary Care teams, doctors, psychologists, nurses, social workers, among others, aiming to facilitate the search for procedures and codes related to symptoms, complaints and procedures in primary health care.
-  url: https://ciap2.app
-  worktype: app
+- title: Simple inclined plane simulation
+  description: Developed as homework during my specialization in Computing Education at USP. <br> <br> <br> <br> <br
+  url: https://ezequiel.app/planoinclinado
+  worktype: web
   opensource: true
-  uid: ciap2.png
+  uid: plano-inclinado.webm
 
 - title: CIAP2
   description: The CIAP 2 application is intended for Brazilian Primary Care teams, doctors, psychologists, nurses, social workers, among others, aiming to facilitate the search for procedures and codes related to symptoms, complaints and procedures in primary health care.
