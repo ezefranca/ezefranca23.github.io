@@ -6,6 +6,7 @@ docs:
   url: https://ciap2.app
   worktype: app
   opensource: true
+  github: null
   uid: ciap2.png
 
 - title: CIAP2
@@ -17,7 +18,7 @@ docs:
 
 - title: Damas
   description: Checkers game made in Unity3D with machine player inteligence build without any AI algorithm
-  url: 
+  url: null
   github: https://github.com/ezefranca/Damas
   worktype: app
   opensource: true
