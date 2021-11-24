@@ -22,7 +22,7 @@
   .container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 30px 1fr 30px;
+  grid-template-rows: 10px 1fr 30px;
 }
 
 .header {
@@ -86,9 +86,8 @@
 .item3 {
     grid-area: item3;
 }
-
-p {
-  max-width: 600px;
+.uk-card-body {
+  padding: 5px 5px 5px 5px;
 }
   </style>
       <link rel="stylesheet" href="/assets/css/uikit.min.css" />
@@ -135,7 +134,7 @@ p {
                     <div class="uk-card-header">
                       <h3 class="uk-card-title">{{ post.title }}</h3>
                       </div>
-                      <p><img class="thumb" src="/assets/img/{{post.uid}}" uk-img></p>
+                      <p><img class="thumb" width="180px" height="180px" src="/assets/img/{{post.uid}}" uk-img></p>
                       <div class="uk-card-body">
                       <p>{{ post.description }}</p>
                     </div>
