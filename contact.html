@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 <div class="container">
   <div class="header"></div>
   <div class="projects">
@@ -11,8 +12,53 @@ layout: default
     </style>
       <h1 class="item1">{{ site.data.projects.title }}</h1>
       <div class="item2">
-        oi
+        <section id=contact class=contact>
+          <div class=container data-aos=fade-up>
+             <div class=section-title>
+             </div>
+             <div class="row mt-1">
+                <div class=col-lg-4>
+                   <div class=info>
+                      <div class=email>
+                         <i class="bi bi-envelope"></i>
+                         <h3>Email::</h3>
+                         <p>ezefranca.br@gmail.com</p>
+                      </div>
+                   </div>
+                </div>
+                <div class="col-lg-8 mt-5 mt-lg-0">
+                   <form>
+                      <div class=row>
+                         <div class="col-md-6 form-group">
+                            <div class="form-group mt-3"> <label for="name">Nome: </label> <input class=form-control id=name name=name placeholder=Nome required></div>
+                            <div class="form-group mt-3"><label for="email">Email: </label> <input type=email class=form-control name=email id=email placeholder=@ required></div>
+                         </div>
+                         <div class="form-group mt-3"><label for="message">Mensagem: </label> <textarea class="form-control textarea" name=message id=message rows=5 placeholder=Mensagem required></textarea></div>
+                         <br>
+                         <div class="form-group mt-3">
+                            <div class=text-right><button onclick=sendmail() type=button class="btn btn-primary">Enviar</button></div>
+                         </div>
+                      </div>
+                   </form>
+                </div>
+             </div>
+          </div>
+       </section>
       </div>
     </div>
   </div>
+</div>
+
+<script src=assets/js/email.js></script>
+<div class="modal fade" id=sucessModal tabindex=-1 role=dialog aria-labelledby=sucessModal aria-hidden=true>
+<div class=modal-dialog role=document>
+<div class=modal-content>
+  <div class=modal-header>
+     <h5 class=modal-title id=exampleModalLabel>Opa!</h5>
+     <button onclick=closemodal() type=button class=close data-dismiss=modal aria-label=Close><span aria-hidden=true>&times;</span></button>
+  </div>
+  <div class=modal-body><span id=username></span>, email enviado com sucesso! Em breve te retorno :)</div>
+  <div class=modal-footer><button onclick=closemodal() type=button class="btn btn-secondary" data-dismiss=modal>Fechar</button></div>
+</div>
+</div>
 </div>
