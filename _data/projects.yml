@@ -2,11 +2,13 @@ docs_list_title: Projects
 docs:
 
 - title: CIAP2
-  description: The CIAP 2 application is intended for Brazilian Primary Care teams, doctors, psychologists, nurses, social workers, among others, aiming to facilitate the search for procedures and codes related to symptoms, complaints and procedures in primary health care.
+  description: The CIAP 2 app is intended for Brazilian Primary Care teams, doctors, psychologists, nurses, social workers, among others, aiming to facilitate the search for procedures and codes related to symptoms, complaints and procedures in primary health care.
   url: https://ciap2.app
   worktype: app
   opensource: true
   github: null
+  appstore: https://itunes.apple.com/app/apple-store/id1450836069?pt=95625862&ct=site&mt=8
+  googleplay: https://play.google.com/store/apps/details?id=com.ciap2&hl=pt_BR
   uid: ciap2.png
 
 - title: Damas
