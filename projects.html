@@ -7,12 +7,7 @@ layout: default
     <div class="content">
       <br>
     <style>
-      .img {
-    float: left;
-    width:  200px;
-    height: 200px;
-    background-size: cover;
-}
+
     </style>
       <h1 class="item1">{{ site.data.projects.title }}</h1>
       <div class="item2">
@@ -23,7 +18,7 @@ layout: default
                     <div class="uk-card-header">
                       <h3 class="uk-card-title">{{ post.title }}</h3>
                       </div>
-                      <p><img class="thumb" height="180px" width="100%" src="/assets/img/{{post.uid}}" uk-img></p>
+                      <p><img class="thumb uk-project-img" src="/assets/img/{{post.uid}}" uk-img></p>
                       <div class="uk-card-body uk-text-justify">
                       <p>{{ post.description }}</p>
                     </div>
