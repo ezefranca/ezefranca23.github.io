@@ -58,6 +58,30 @@
                     ons.notification.alert('Button is tapped!');
                   })
                 });
+
+                document.addEventListener('init', function(event) {
+  if (event.target.matches('#tabbar-page')) {
+    var tabbar = document.querySelector('ons-tabbar');
+    var tabs = tabbar.tabs;
+    var navi = document.querySelector('ons-navigator');
+    var runningAnimation = false;
+    
+    tabs.forEach(function(tab) {
+      tab.onClick = function() {
+        if (!tab.isActive() && !runningAnimation) {
+          tabs[tabbar.getActiveTabIndex()].setActive(false);
+          tab.setActive(true);
+          runningAnimation = true;
+          
+          navi
+            .bringPageTop(tab.getAttribute('navigator-page'), { animation: 'lift' })
+            .then(function() { runningAnimation = false });
+        }
+      };
+    });
+  }
+});
+
               </script>
               <ons-button>Click me!</ons-button>
           </p>
