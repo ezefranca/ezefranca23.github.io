@@ -10,18 +10,19 @@
 
     <ons-page id="tabbar-page">
         <ons-tabbar swipeable position="auto">
-          <ons-tab page="navigator.html" navigator-page="tab1.html" label="Tab 1" icon="ion-home" active></ons-tab>
-          <ons-tab navigator-page="tab2.html" label="Tab 2" icon="md-settings"></ons-tab>
-          <ons-tab navigator-page="tab3.html" label="Tab 3" icon="md-face"></ons-tab>
+          <ons-tab page="navigator.html" navigator-page="tab1.html" label="Home" icon="md-home" active></ons-tab>
+          <ons-tab navigator-page="projects.html" label="Projects" icon="md-settings"></ons-tab>
+          <ons-tab navigator-page="talks.html" label="Talks" icon="md-face"></ons-tab>
+          <ons-tab navigator-page="contact.html" label="Contact" icon="md-face"></ons-tab>
         </ons-tabbar>
       </ons-page>
       
       <template id="navigator.html">
-        <ons-navigator page="tab1.html"></ons-navigator>
+        <ons-navigator page="index.html"></ons-navigator>
       </template>
       
-      <template id="tab1.html">
-        <ons-page id="Tab1">
+      <template id="index.html">
+        <ons-page id="Home">
           <ons-toolbar>
             <div class="center">Home</div>
           </ons-toolbar>
@@ -32,8 +33,8 @@
         </ons-page>
       </template>
       
-      <template id="tab2.html">
-        <ons-page id="Tab2">
+      <template id="projects.html">
+        <ons-page id="Projects">
           <ons-toolbar>
             <div class="center">Projects</div>
           </ons-toolbar>
@@ -44,8 +45,8 @@
         </ons-page>
       </template>
       
-      <template id="tab3.html">
-        <ons-page id="Tab3">
+      <template id="talks.html">
+        <ons-page id="Talks">
           <ons-toolbar>
             <div class="center">Talks</div>
           </ons-toolbar>
