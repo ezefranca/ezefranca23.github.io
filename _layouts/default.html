@@ -1,175 +1,242 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ site.description }}">
-    {% if site.keywords %}
-    <meta name="keywords" content="{{ site.keywords }}">
-    {% endif %}
-    {% if site.canonical %}
-    <link rel="canonical" href="{{ site.canonical }}"/>
-    {% endif %}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-    <link rel=stylesheet href="./assets/css/eze.css">
-    <link rel=stylesheet href=https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css >
-    <script src=https://kit.fontawesome.com/ac18aec964.js crossorigin=anonymous></script>
-    <script src=https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-  
-  <style>
-  .container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 10px 1fr 30px;
-}
-
-.header {
-  border-bottom: 1px solid lightgrey;
-}
-
-.sidebar {
-  border-right: 1px solid lightgrey;
-}
-
-.footer {
-    border-top: 1px solid lightgrey;
-}
-
-.projects {
-  display: grid;
-  grid-template-columns: 1fr;
-  overflow: hidden;
-}
-
-.content {
-  display: grid;
-  grid-template-rows: 0.025fr 0.25fr 0.05fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 5px;
- grid-template-areas: "item1 item1 item1 item1"
-                      "item2 item2 item2 item2"
-                       "item3 item3 item3 item3";
-  overflow-y: scroll;
-}
-
-.item > iframe {
-    object-fit:scale-down;
-    width: 100%;
-  height: 300px;
-}
-
-
-.item > img {
-    object-fit:scale-down;
-    width: 100%;
-  height: 300px;
-}
-
-.item {
-    background-color: clear;
-    justify-self: stretch;
-}
-
-
-
-.item1 {
-    grid-area: item1;
-}
-
-.item2 {
-    grid-area: item2;
-}
-
-.item3 {
-    grid-area: item3;
-}
-.uk-card-body {
-  padding: 0px 0px !important;
-}
-
-.uk-card-body {
-  padding: 5px 5px 5px 5px  !important;
-}
-
-@media (min-width:1200px) {
- .uk-card-body {
-  padding:5px 5px !important;
- }
- .uk-card-header {
-  padding:5px 5px !important;
- }
- .uk-card-footer {
-  padding:5px 5px !important;
- }
-}
-.uk-project-img {
-   width: auto !important;    
-   height: 200px !important;    
-   display:inline-block;    
-   margin-right: auto;    
-   margin-left: auto;  
-}
-.social-icon {
-    padding-left: 20px;
-    padding-right: 20px;
-}
-  </style>
-      <link rel="stylesheet" href="/assets/css/uikit.min.css" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ site.description }}">
+  {% if site.keywords %}
+  <meta name="keywords" content="{{ site.keywords }}">
+  {% endif %}
+  {% if site.canonical %}
+  <link rel="canonical" href="{{ site.canonical }}"/>
+  {% endif %}
+  <link rel="stylesheet" href="/assets/css/uikit.min.css" />
       <script src="/assets/js/uikit.min.js"></script>
       <script src="/assets/js/uikit-icons.min.js"></script>
+  <link rel=stylesheet href=https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css >
+  <script src=https://kit.fontawesome.com/ac18aec964.js crossorigin=anonymous></script>
+  <script src=https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js></script>
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/onsen/2.11.2/css/dark-onsen-css-components.min.css" integrity="sha512-nR2AR4WNtA5vTlmo/U3gOkgCKru+lkiiUT/UL0Ls+iECJK0O0bDEOEXTu4a2HVlgXEE/hWXFmm+pO0BHstELVw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/onsen/2.11.2/css/old-onsen-css-components.min.css" integrity="sha512-J5pVdtAUnONp9n+ZXffIjFuAUvHt2f5tc8iLn4ti5ye4dK/aKh2jphOtJTkjJuB7z9P3b4/VotpI8qAaGY6iEw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/onsen/2.11.2/css/onsen-css-components.min.css" integrity="sha512-XIqsKIcJQJhqQBU71ws06GiPOlY1xnPVjQ90ItTcfUGFQzGacbjijISeFzy+QqcZ8S5XS5Pi6jazaNFWwadKFw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/onsen/2.11.2/css/onsenui-core.min.css" integrity="sha512-/9de+FbeVqo4pyCR+owEb23kGVD+b21dDURXHDledZL1ZPdqjPRLRej6LPwosiR3hf1Ly2Vx443U8xc1d1jpoQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/onsen/2.11.2/css/onsenui-fonts.min.css" integrity="sha512-LmUItaSr7ry2QSljkWa93d0nio/CVYAEFXcOIibqE0xXOuTUTFWOzROjUL7/2AbGtexLdbPoRyxuOH0xWr5FAA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/onsen/2.11.2/css/onsenui.min.css" integrity="sha512-wzfzHpb8lovkAGoBTuIIA/htl+mKIg8ROhRJfnROVhSBM0cFMm16Q6NFkUGm/Fp+fdCs01H+bl5PUMl0WEf9Jw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/onsen/2.11.2/css/font_awesome/css/all.min.css" integrity="sha512-gMjQeDaELJ0ryCI+FtItusU9MkAifCZcGq789FrzkiM49D8lbDhoaUaIX4ASU187wofMNlgBJ4ckbrXM9sE6Pg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/onsen/2.11.2/css/font_awesome/css/brands.min.css" integrity="sha512-1d89Q/TW/Znp0JNk+o7ur0XPTDudRy1IiCnAjTU2Vb8RqPUg2DKTyLstO4b5mUC29uul+iJudbSmKnS4npPqwQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/onsen/2.11.2/css/font_awesome/css/fontawesome.min.css" integrity="sha512-IejtbqJqhyw0pAfIGrqsO/+9McIyWp3zwz9Y0oKOpsSo9XHOCWwPcS6ezTpdDG5ZIkmMdvkkd1eq7C56fRqYxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/onsen/2.11.2/js/onsenui.min.js" integrity="sha512-8LTza/N9yBaiBWwN16SL/2A0ERRXrZkBYEof+g3ui4KaAm9TIg/tDad5aLfI+wiGxrnznX4cV1CRZAgsg5l1+w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+  <script src="https://unpkg.com/jquery/dist/jquery.min.js"></script>
 </head>
-<body id="body" class="light-mode">
-    <section>  
+<body>
 
-      <div class="uk-position-top">
-        <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
-            <div class="uk-navbar-center">
-                <ul class="uk-navbar-nav">
-                  {% for item in site.data.menu.docs %}
-                  <div class="uk-navbar-item"><li><a href="{{ item.url }}">{{ item.title }}</a></li></div>
-                  {% endfor %}
-                </ul>
+    <ons-page id="tabbar-page">
+        <ons-tabbar swipeable position="auto">
+          <ons-tab page="navigator.html" navigator-page="index.html" label="Home" icon="md-home" active></ons-tab>
+          <ons-tab navigator-page="projects.html" label="Projects" icon="md-code"></ons-tab>
+          <ons-tab navigator-page="talks.html" label="Talks" icon="md-slideshow"></ons-tab>
+          <ons-tab navigator-page="contact.html" label="Contact" icon="md-email"></ons-tab>
+        </ons-tabbar>
+      </ons-page>
+      
+      <template id="navigator.html">
+        <ons-navigator page="index.html"></ons-navigator>
+      </template>
+      
+      <template id="index.html">
+        <ons-page id="Home">
+          <ons-toolbar>
+            <div class="center">Home</div>
+          </ons-toolbar>
+
+          <div style="height: 200px; padding: 1px 0 0 0;">
+            <div class="card">
+              <h2 class="card__title">{{ site.title }}</h2>
+              <div class="card__content">
+                {% if site.avatar %}
+                <img src="{{site.avatar}}" alt="avatar" onContextMenu="return false" />
+                {% endif %}
+
+                {{ site.position }}
+              </div>
             </div>
-        </nav>
-    </div>
-
-      <!-- <nav>
-        <div class="nav-container">
-          <ul>
-            {% for item in site.data.menu.docs %}
-            <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-            {% endfor %}
-          </ul>
-        </div>
-      </nav> -->
-             <br>
-             {{ content }}     
-
-
-              
-          <div class=container>
-                     
-                      <div class="social">
-                         <div class=social-links>
-                          <a class=social-icon href="{{ site.linkedin }}" aria-label="Perfil de Ezequiel no LinkedIn"><i class="fab fa-linkedin-in" aria-hidden=true aria-label="Perfil de Ezequiel no LinkedIn"></i></a>
-                          <a class=social-icon href="{{ site.github }}" aria-label="Perfil de ezequiel no Github"><i class="fab fa-github" aria-hidden=true aria-label="Perfil de ezequiel no Github"></i></a>
-                          <a class=social-icon href="{{ site.twitter }}" aria-label="Perfil de Ezequiel no Twitter"><i class="fab fa-twitter" aria-hidden=true aria-label="Perfil de Ezequiel no Twitter"></i></a>
-                          <a class=social-icon href="{{ site.lattes }}" aria-label="Link para Currículo Lattes de Ezequiel"><i class="ai ai-lattes-square ai-1x" aria-label="Link para Currículo Lattes de Ezequiel no Twitter"></i></a>
+          </div>
+        </ons-page>
+      </template>
+      
+      <template id="projects.html">
+        <ons-page id="Projects">
+          <ons-toolbar>
+            <div class="center">Projects</div>
+          </ons-toolbar>
+      
+          <p style="text-align: center;">
+            <div class="uk-child-width-1-3@m uk-text-center" uk-grid uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 1; repeat: true">
+              {% for post in site.data.projects.docs %}
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body">
+                      <div class="uk-card-header">
+                        <h3 class="uk-card-title">{{ post.title }}</h3>
                         </div>
-                   </div>
+                        <p><img class="thumb uk-project-img" src="/assets/img/{{post.uid}}" uk-img></p>
+                        <div class="uk-card-body uk-text-justify">
+                        <p>{{ post.description }}</p>
+                      </div>
+                      <div class="uk-card-footer">
+  
+                        {% if post.appstore != null %}
+                        <a class=social-icon href="{{ post.appstore }}" aria-label="{{post.title}}"><i class="fab fa-app-store-ios" aria-hidden=true aria-label="{{post.title}}"></i></a>
+                        {% endif %}
+  
+                        {% if post.googleplay != null %}
+                        <a class=social-icon href="{{ post.googleplay }}" aria-label="{{post.title}}"><i class="fab fa-google-play" aria-hidden=true aria-label="{{post.title}}"></i></a>
+                        {% endif %}
+  
+                        {% if post.youtube != null %}
+                        <a class=social-icon href="{{ post.youtube }}" aria-label="{{post.title}}"><i class="fab fa-youtube" aria-hidden=true aria-label="{{post.title}}"></i></a>
+                        {% endif %}
+  
+                        {% if post.github != null %}
+                        <a class=social-icon href="{{ post.github }}" aria-label="{{post.title}}"><i class="fab fa-github" aria-hidden=true aria-label="{{post.title}}"></i></a>
+                        {% endif %}
+                        
+                        {% if post.url != null %}
+                        <a class=social-icon href="{{ post.url }}" aria-label="{{post.title}}"><i class="fas fa-external-link-alt" aria-hidden=true aria-label="{{post.title}}"></i></a>
+                        {% endif %}
+  
+                        {% if post.paper != null %}
+                        <a class=social-icon href="{{ post.paper }}" aria-label="{{post.title}}"><i class="far fa-file-pdf" aria-hidden=true aria-label="{{post.title}}"></i></a>
+                        {% endif %}
+                      </div>
+  
+                    </div>
+                </div>
+                {% endfor %}
             </div>
-          </section>
+          </p>
+        </ons-page>
+      </template>
+      
+      <template id="talks.html">
+        <ons-page id="Talks">
+          <ons-toolbar>
+            <div class="center">Talks</div>
+          </ons-toolbar>
+      
+          <p style="text-align: center;">
+            <script>
+                $(function(){
+                  // Initialization code
+                  $('ons-button').on('click', function(e) {
+                    ons.notification.alert('Button is tapped!');
+                  })
+                });
+              </script>
+              <ons-button>Click me!</ons-button>
+          </p>
+        </ons-page>
+      </template>
 
-          <!-- <section>
-            <div class="typewriter">
-              <h2>#import Arduino, Python, Swift, C#, Unity</h2>
+
+      <template id="contact.html">
+        <ons-page id="contact">
+          <ons-toolbar>
+            <div class="center">Contact</div>
+          </ons-toolbar>
+      
+          <div class="container">
+            <div class="header"></div>
+            <div class="projects">
+              <div class="content">
+                <br>
+              <style>
+          
+              </style>
+                <h1 class="item1">{{ site.data.projects.title }}</h1>
+                <div class="item2">
+                  <section id=contact class=contact>
+                    <div class=container data-aos=fade-up>
+                       <div class=section-title>
+                       </div>
+                       <div class="row mt-1">
+                          <div class=col-lg-4>
+                             <div class=info>
+                                <div class=email>
+                                   <i class="bi bi-envelope"></i>
+                                   <h3>Email::</h3>
+                                   <p>ezefranca.br@gmail.com</p>
+                                </div>
+                             </div>
+                          </div>
+                          <div class="col-lg-8 mt-5 mt-lg-0">
+                             <form>
+                                <div class=row>
+                                   <div class="col-md-6 form-group">
+                                      <div class="form-group mt-3"> <label for="name">Nome: </label> <input class=form-control id=name name=name placeholder=Nome required></div>
+                                      <div class="form-group mt-3"><label for="email">Email: </label> <input type=email class=form-control name=email id=email placeholder=@ required></div>
+                                   </div>
+                                   <div class="form-group mt-3"><label for="message">Mensagem: </label> <textarea class="form-control textarea" name=message id=message rows=5 placeholder=Mensagem required></textarea></div>
+                                   <br>
+                                   <div class="form-group mt-3">
+                                      <div class=text-right><button onclick=sendmail() type=button class="btn btn-primary">Enviar</button></div>
+                                   </div>
+                                </div>
+                             </form>
+                          </div>
+                       </div>
+                    </div>
+                 </section>
+                </div>
+              </div>
             </div>
-          </section> -->
-          <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-          <script src=assets/js/email.js></script>
+            <script src=assets/js/email.js></script>
+          <div class="modal fade" id=sucessModal tabindex=-1 role=dialog aria-labelledby=sucessModal aria-hidden=true>
+          <div class=modal-dialog role=document>
+          <div class=modal-content>
+            <div class=modal-header>
+               <h5 class=modal-title id=exampleModalLabel>Opa!</h5>
+               <button onclick=closemodal() type=button class=close data-dismiss=modal aria-label=Close><span aria-hidden=true>&times;</span></button>
+            </div>
+            <div class=modal-body><span id=username></span>, email enviado com sucesso! Em breve te retorno :)</div>
+            <div class=modal-footer><button onclick=closemodal() type=button class="btn btn-secondary" data-dismiss=modal>Fechar</button></div>
+          </div>
+          </div>
+          </div>
+          </div>
+          
+        </ons-page>
+      </template>
+
+      <script>
+                        document.addEventListener('init', function(event) {
+  if (event.target.matches('#tabbar-page')) {
+    var tabbar = document.querySelector('ons-tabbar');
+    var tabs = tabbar.tabs;
+    var navi = document.querySelector('ons-navigator');
+    var runningAnimation = false;
+    
+    tabs.forEach(function(tab) {
+      tab.onClick = function() {
+        if (!tab.isActive() && !runningAnimation) {
+          tabs[tabbar.getActiveTabIndex()].setActive(false);
+          tab.setActive(true);
+          runningAnimation = true;
+          
+          navi
+            .bringPageTop(tab.getAttribute('navigator-page'), { animation: 'lift' })
+            .then(function() { runningAnimation = false });
+        }
+      };
+    });
+  }
+});
+      </script>
+<script src=assets/js/email.js></script>
 </body>
 </html>

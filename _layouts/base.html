@@ -1,8 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ site.description }}">
+  {% if site.keywords %}
+  <meta name="keywords" content="{{ site.keywords }}">
+  {% endif %}
+  {% if site.canonical %}
+  <link rel="canonical" href="{{ site.canonical }}"/>
+  {% endif %}
+  <link rel="stylesheet" href="/assets/css/uikit.min.css" />
+      <script src="/assets/js/uikit.min.js"></script>
+      <script src="/assets/js/uikit-icons.min.js"></script>
+  <link rel=stylesheet href=https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css >
+  <script src=https://kit.fontawesome.com/ac18aec964.js crossorigin=anonymous></script>
+  <script src=https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js></script>
   <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
-  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/onsen/2.11.2/css/dark-onsen-css-components.min.css" integrity="sha512-nR2AR4WNtA5vTlmo/U3gOkgCKru+lkiiUT/UL0Ls+iECJK0O0bDEOEXTu4a2HVlgXEE/hWXFmm+pO0BHstELVw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/onsen/2.11.2/css/old-onsen-css-components.min.css" integrity="sha512-J5pVdtAUnONp9n+ZXffIjFuAUvHt2f5tc8iLn4ti5ye4dK/aKh2jphOtJTkjJuB7z9P3b4/VotpI8qAaGY6iEw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/onsen/2.11.2/css/onsen-css-components.min.css" integrity="sha512-XIqsKIcJQJhqQBU71ws06GiPOlY1xnPVjQ90ItTcfUGFQzGacbjijISeFzy+QqcZ8S5XS5Pi6jazaNFWwadKFw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/onsen/2.11.2/css/onsenui-core.min.css" integrity="sha512-/9de+FbeVqo4pyCR+owEb23kGVD+b21dDURXHDledZL1ZPdqjPRLRej6LPwosiR3hf1Ly2Vx443U8xc1d1jpoQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/onsen/2.11.2/css/onsenui-fonts.min.css" integrity="sha512-LmUItaSr7ry2QSljkWa93d0nio/CVYAEFXcOIibqE0xXOuTUTFWOzROjUL7/2AbGtexLdbPoRyxuOH0xWr5FAA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/onsen/2.11.2/css/onsenui.min.css" integrity="sha512-wzfzHpb8lovkAGoBTuIIA/htl+mKIg8ROhRJfnROVhSBM0cFMm16Q6NFkUGm/Fp+fdCs01H+bl5PUMl0WEf9Jw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/onsen/2.11.2/css/font_awesome/css/all.min.css" integrity="sha512-gMjQeDaELJ0ryCI+FtItusU9MkAifCZcGq789FrzkiM49D8lbDhoaUaIX4ASU187wofMNlgBJ4ckbrXM9sE6Pg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/onsen/2.11.2/css/font_awesome/css/brands.min.css" integrity="sha512-1d89Q/TW/Znp0JNk+o7ur0XPTDudRy1IiCnAjTU2Vb8RqPUg2DKTyLstO4b5mUC29uul+iJudbSmKnS4npPqwQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/onsen/2.11.2/css/font_awesome/css/fontawesome.min.css" integrity="sha512-IejtbqJqhyw0pAfIGrqsO/+9McIyWp3zwz9Y0oKOpsSo9XHOCWwPcS6ezTpdDG5ZIkmMdvkkd1eq7C56fRqYxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/onsen/2.11.2/js/onsenui.min.js" integrity="sha512-8LTza/N9yBaiBWwN16SL/2A0ERRXrZkBYEof+g3ui4KaAm9TIg/tDad5aLfI+wiGxrnznX4cV1CRZAgsg5l1+w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
   <script src="https://unpkg.com/jquery/dist/jquery.min.js"></script>
 </head>
@@ -10,10 +38,10 @@
 
     <ons-page id="tabbar-page">
         <ons-tabbar swipeable position="auto">
-          <ons-tab page="navigator.html" navigator-page="tab1.html" label="Home" icon="md-home" active></ons-tab>
-          <ons-tab navigator-page="projects.html" label="Projects" icon="md-settings"></ons-tab>
-          <ons-tab navigator-page="talks.html" label="Talks" icon="md-face"></ons-tab>
-          <ons-tab navigator-page="contact.html" label="Contact" icon="md-face"></ons-tab>
+          <ons-tab page="navigator.html" navigator-page="index.html" label="Home" icon="md-home" active></ons-tab>
+          <ons-tab navigator-page="projects.html" label="Projects" icon="md-code"></ons-tab>
+          <ons-tab navigator-page="talks.html" label="Talks" icon="md-slideshow"></ons-tab>
+          <ons-tab navigator-page="contact.html" label="Contact" icon="md-email"></ons-tab>
         </ons-tabbar>
       </ons-page>
       
@@ -26,10 +54,19 @@
           <ons-toolbar>
             <div class="center">Home</div>
           </ons-toolbar>
-      
-          <p style="text-align: center;">
-            This is the first page.
-          </p>
+
+          <div style="height: 200px; padding: 1px 0 0 0;">
+            <div class="card">
+              <h2 class="card__title">{{ site.title }}</h2>
+              <div class="card__content">
+                {% if site.avatar %}
+                <img src="{{site.avatar}}" alt="avatar" onContextMenu="return false" />
+                {% endif %}
+
+                {{ site.position }}
+              </div>
+            </div>
+          </div>
         </ons-page>
       </template>
       
@@ -40,7 +77,48 @@
           </ons-toolbar>
       
           <p style="text-align: center;">
-            This is the second page.
+            <div class="uk-child-width-1-3@m uk-text-center" uk-grid uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 1; repeat: true">
+              {% for post in site.data.projects.docs %}
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body">
+                      <div class="uk-card-header">
+                        <h3 class="uk-card-title">{{ post.title }}</h3>
+                        </div>
+                        <p><img class="thumb uk-project-img" src="/assets/img/{{post.uid}}" uk-img></p>
+                        <div class="uk-card-body uk-text-justify">
+                        <p>{{ post.description }}</p>
+                      </div>
+                      <div class="uk-card-footer">
+  
+                        {% if post.appstore != null %}
+                        <a class=social-icon href="{{ post.appstore }}" aria-label="{{post.title}}"><i class="fab fa-app-store-ios" aria-hidden=true aria-label="{{post.title}}"></i></a>
+                        {% endif %}
+  
+                        {% if post.googleplay != null %}
+                        <a class=social-icon href="{{ post.googleplay }}" aria-label="{{post.title}}"><i class="fab fa-google-play" aria-hidden=true aria-label="{{post.title}}"></i></a>
+                        {% endif %}
+  
+                        {% if post.youtube != null %}
+                        <a class=social-icon href="{{ post.youtube }}" aria-label="{{post.title}}"><i class="fab fa-youtube" aria-hidden=true aria-label="{{post.title}}"></i></a>
+                        {% endif %}
+  
+                        {% if post.github != null %}
+                        <a class=social-icon href="{{ post.github }}" aria-label="{{post.title}}"><i class="fab fa-github" aria-hidden=true aria-label="{{post.title}}"></i></a>
+                        {% endif %}
+                        
+                        {% if post.url != null %}
+                        <a class=social-icon href="{{ post.url }}" aria-label="{{post.title}}"><i class="fas fa-external-link-alt" aria-hidden=true aria-label="{{post.title}}"></i></a>
+                        {% endif %}
+  
+                        {% if post.paper != null %}
+                        <a class=social-icon href="{{ post.paper }}" aria-label="{{post.title}}"><i class="far fa-file-pdf" aria-hidden=true aria-label="{{post.title}}"></i></a>
+                        {% endif %}
+                      </div>
+  
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
           </p>
         </ons-page>
       </template>
@@ -72,9 +150,66 @@
             <div class="center">Contact</div>
           </ons-toolbar>
       
-          <p style="text-align: center;">
-            This is contact page
-          </p>
+          <div class="container">
+            <div class="header"></div>
+            <div class="projects">
+              <div class="content">
+                <br>
+              <style>
+          
+              </style>
+                <h1 class="item1">{{ site.data.projects.title }}</h1>
+                <div class="item2">
+                  <section id=contact class=contact>
+                    <div class=container data-aos=fade-up>
+                       <div class=section-title>
+                       </div>
+                       <div class="row mt-1">
+                          <div class=col-lg-4>
+                             <div class=info>
+                                <div class=email>
+                                   <i class="bi bi-envelope"></i>
+                                   <h3>Email::</h3>
+                                   <p>ezefranca.br@gmail.com</p>
+                                </div>
+                             </div>
+                          </div>
+                          <div class="col-lg-8 mt-5 mt-lg-0">
+                             <form>
+                                <div class=row>
+                                   <div class="col-md-6 form-group">
+                                      <div class="form-group mt-3"> <label for="name">Nome: </label> <input class=form-control id=name name=name placeholder=Nome required></div>
+                                      <div class="form-group mt-3"><label for="email">Email: </label> <input type=email class=form-control name=email id=email placeholder=@ required></div>
+                                   </div>
+                                   <div class="form-group mt-3"><label for="message">Mensagem: </label> <textarea class="form-control textarea" name=message id=message rows=5 placeholder=Mensagem required></textarea></div>
+                                   <br>
+                                   <div class="form-group mt-3">
+                                      <div class=text-right><button onclick=sendmail() type=button class="btn btn-primary">Enviar</button></div>
+                                   </div>
+                                </div>
+                             </form>
+                          </div>
+                       </div>
+                    </div>
+                 </section>
+                </div>
+              </div>
+            </div>
+            <script src=assets/js/email.js></script>
+          <div class="modal fade" id=sucessModal tabindex=-1 role=dialog aria-labelledby=sucessModal aria-hidden=true>
+          <div class=modal-dialog role=document>
+          <div class=modal-content>
+            <div class=modal-header>
+               <h5 class=modal-title id=exampleModalLabel>Opa!</h5>
+               <button onclick=closemodal() type=button class=close data-dismiss=modal aria-label=Close><span aria-hidden=true>&times;</span></button>
+            </div>
+            <div class=modal-body><span id=username></span>, email enviado com sucesso! Em breve te retorno :)</div>
+            <div class=modal-footer><button onclick=closemodal() type=button class="btn btn-secondary" data-dismiss=modal>Fechar</button></div>
+          </div>
+          </div>
+          </div>
+          </div>
+          
         </ons-page>
       </template>
 
@@ -102,8 +237,6 @@
   }
 });
       </script>
-
+<script src=assets/js/email.js></script>
 </body>
 </html>
-
-

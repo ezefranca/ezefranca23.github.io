@@ -11,48 +11,7 @@ layout: default
     </style>
       <h1 class="item1">{{ site.data.projects.title }}</h1>
       <div class="item2">
-        <div class="uk-child-width-1-3@m uk-text-center" uk-grid uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 1; repeat: true">
-            {% for post in site.data.projects.docs %}
-              <div>
-                  <div class="uk-card uk-card-default uk-card-body">
-                    <div class="uk-card-header">
-                      <h3 class="uk-card-title">{{ post.title }}</h3>
-                      </div>
-                      <p><img class="thumb uk-project-img" src="/assets/img/{{post.uid}}" uk-img></p>
-                      <div class="uk-card-body uk-text-justify">
-                      <p>{{ post.description }}</p>
-                    </div>
-                    <div class="uk-card-footer">
 
-                      {% if post.appstore != null %}
-                      <a class=social-icon href="{{ post.appstore }}" aria-label="{{post.title}}"><i class="fab fa-app-store-ios" aria-hidden=true aria-label="{{post.title}}"></i></a>
-                      {% endif %}
-
-                      {% if post.googleplay != null %}
-                      <a class=social-icon href="{{ post.googleplay }}" aria-label="{{post.title}}"><i class="fab fa-google-play" aria-hidden=true aria-label="{{post.title}}"></i></a>
-                      {% endif %}
-
-                      {% if post.youtube != null %}
-                      <a class=social-icon href="{{ post.youtube }}" aria-label="{{post.title}}"><i class="fab fa-youtube" aria-hidden=true aria-label="{{post.title}}"></i></a>
-                      {% endif %}
-
-                      {% if post.github != null %}
-                      <a class=social-icon href="{{ post.github }}" aria-label="{{post.title}}"><i class="fab fa-github" aria-hidden=true aria-label="{{post.title}}"></i></a>
-                      {% endif %}
-                      
-                      {% if post.url != null %}
-                      <a class=social-icon href="{{ post.url }}" aria-label="{{post.title}}"><i class="fas fa-external-link-alt" aria-hidden=true aria-label="{{post.title}}"></i></a>
-                      {% endif %}
-
-                      {% if post.paper != null %}
-                      <a class=social-icon href="{{ post.paper }}" aria-label="{{post.title}}"><i class="far fa-file-pdf" aria-hidden=true aria-label="{{post.title}}"></i></a>
-                      {% endif %}
-                    </div>
-
-                  </div>
-              </div>
-              {% endfor %}
-          </div>
       </div>
     </div>
   </div>
