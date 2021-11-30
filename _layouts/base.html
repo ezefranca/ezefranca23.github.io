@@ -48,11 +48,19 @@
             <div class="card">
               <h2 class="card__title">{{ site.title }}</h2>
               <div class="card__content">
-                {% if site.avatar %}
-                <img src="{{site.avatar}}" alt="avatar" onContextMenu="return false" />
-                {% endif %}
 
-                {{ site.position }}
+                <ul class="list">                  
+                    <li class="list-item">
+                      <div class="list-item__left">
+                        <img class="list-item__thumbnail" src="{{site.avatar}}" alt="Ezequiel">
+                      </div>
+                  
+                      <div class="list-item__center">
+                        <div class="list-item__title">Hi, </div>
+                        <div class="list-item__subtitle">{{ site.position }}</div>
+                      </div>
+                    </li>
+                  </ul>
               </div>
             </div>
           </div>
@@ -66,7 +74,7 @@
           </ons-toolbar>
       
           <p style="text-align: center;">
-            <div class="uk-child-width-1-3@m uk-text-center" uk-grid uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 1; repeat: true">
+            <div class="uk-child-width-1-3@m uk-text-center" uk-grid>
               {% for post in site.data.projects.docs %}
                 <div>
                     <div class="uk-card uk-card-default uk-card-body">
