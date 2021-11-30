@@ -7,14 +7,64 @@
   <script src="https://unpkg.com/jquery/dist/jquery.min.js"></script>
 </head>
 <body>
-  <script>
-    $(function(){
-      // Initialization code
-      $('ons-button').on('click', function(e) {
-        ons.notification.alert('Button is tapped!');
-      })
-    });
-  </script>
-  <ons-button>Click me!</ons-button>
+
+    <ons-page id="tabbar-page">
+        <ons-tabbar swipeable position="auto">
+          <ons-tab page="navigator.html" navigator-page="tab1.html" label="Tab 1" icon="ion-home" active></ons-tab>
+          <ons-tab navigator-page="tab2.html" label="Tab 2" icon="md-settings"></ons-tab>
+          <ons-tab navigator-page="tab3.html" label="Tab 3" icon="md-face"></ons-tab>
+        </ons-tabbar>
+      </ons-page>
+      
+      <template id="navigator.html">
+        <ons-navigator page="tab1.html"></ons-navigator>
+      </template>
+      
+      <template id="tab1.html">
+        <ons-page id="Tab1">
+          <ons-toolbar>
+            <div class="center">Tab 1</div>
+          </ons-toolbar>
+      
+          <p style="text-align: center;">
+            This is the first page.
+          </p>
+        </ons-page>
+      </template>
+      
+      <template id="tab2.html">
+        <ons-page id="Tab2">
+          <ons-toolbar>
+            <div class="center">Tab 2</div>
+          </ons-toolbar>
+      
+          <p style="text-align: center;">
+            This is the second page.
+          </p>
+        </ons-page>
+      </template>
+      
+      <template id="tab3.html">
+        <ons-page id="Tab3">
+          <ons-toolbar>
+            <div class="center">Tab 3</div>
+          </ons-toolbar>
+      
+          <p style="text-align: center;">
+            <script>
+                $(function(){
+                  // Initialization code
+                  $('ons-button').on('click', function(e) {
+                    ons.notification.alert('Button is tapped!');
+                  })
+                });
+              </script>
+              <ons-button>Click me!</ons-button>
+          </p>
+        </ons-page>
+      </template>
+
 </body>
 </html>
+
+
