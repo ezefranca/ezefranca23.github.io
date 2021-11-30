@@ -58,8 +58,27 @@
                     ons.notification.alert('Button is tapped!');
                   })
                 });
+              </script>
+              <ons-button>Click me!</ons-button>
+          </p>
+        </ons-page>
+      </template>
 
-                document.addEventListener('init', function(event) {
+
+      <template id="contact.html">
+        <ons-page id="contact">
+          <ons-toolbar>
+            <div class="center">Contact</div>
+          </ons-toolbar>
+      
+          <p style="text-align: center;">
+            This is contact page
+          </p>
+        </ons-page>
+      </template>
+
+      <script>
+                        document.addEventListener('init', function(event) {
   if (event.target.matches('#tabbar-page')) {
     var tabbar = document.querySelector('ons-tabbar');
     var tabs = tabbar.tabs;
@@ -81,25 +100,7 @@
     });
   }
 });
-
-              </script>
-              <ons-button>Click me!</ons-button>
-          </p>
-        </ons-page>
-      </template>
-
-
-      <template id="contact.html">
-        <ons-page id="contact">
-          <ons-toolbar>
-            <div class="center">Contact</div>
-          </ons-toolbar>
-      
-          <p style="text-align: center;">
-            This is contact page
-          </p>
-        </ons-page>
-      </template>
+      </script>
 
 </body>
 </html>
